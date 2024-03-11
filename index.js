@@ -10,10 +10,12 @@ const app = express()
 
 app.use(express.json())
 app.use(cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: "https://holiday-q7jo.onrender.com",
     credentials: true
 }))
 app.use(cookieParser())
+app.use(express.static("dist"))
 app.use(express.static("HolidayImage"))
 
 
